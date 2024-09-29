@@ -9,7 +9,7 @@
 
   }
   @if (places()) {
-  <app-places [places]="places()!"/>
+  <app-places [places]="places()!" (selectPlace)="onRemovePlace($event)"/>
   } @else if (places().length === 0) {
   <p class="fallback-text">No places added to your Favorite.</p>
   }
